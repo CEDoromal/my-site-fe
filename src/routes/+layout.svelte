@@ -4,4 +4,7 @@
 </script>
 
 <ModeWatcher />
+
+<div class="flex items-center justify-center h-full p-24">
 <slot />
+</div>
