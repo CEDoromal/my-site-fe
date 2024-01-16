@@ -4,6 +4,10 @@
 	import { Button } from '$lib/components/ui/button';
 </script>
 
+<svelte:head>
+	<title>CEDoromal</title>
+</svelte:head>
+
 <main class="h-screen snap-y snap-mandatory overflow-y-auto scroll-smooth">
 	<section
 		id="about-me"
