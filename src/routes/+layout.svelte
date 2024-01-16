@@ -5,6 +5,6 @@
 
 <ModeWatcher />
 
-<div class="flex items-center justify-center h-full p-4 sm:p-24">
-<slot />
+<div class="flex items-center justify-center flex-wrap">
+	<slot />
 </div>
