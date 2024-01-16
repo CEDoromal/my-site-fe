@@ -1,13 +1,40 @@
-<div class="flex flex-wrap justify-center gap-12">
-	<div class="flex flex-col items-center sm:items-start w-full lg:w-1/3">
-		<h1 class="scroll-m-20 text-2xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
-			Carl Eric Doromal
-		</h1>
-		<blockquote class="mt-6 border-l-2 pl-6 italic text-justify">
-			"A BS Computer Science student at Mapúa University with a keen interest in computers and
-			projects that require a strong knowledge of computer science fundamentals. Tinkering with
-			computers and electronics has been a hobby of mine since I was a teenager. Now, I am looking
-			to use my knowledge and apply it in real-life scenarios."
-		</blockquote>
-	</div>
-</div>
+<script>
+	import Introduction from '$lib/components/Introduction.svelte';
+	import { ChevronDown, ChevronUp } from 'radix-icons-svelte';
+	import { Button } from '$lib/components/ui/button';
+</script>
+
+<main class="h-screen snap-y snap-mandatory overflow-y-auto scroll-smooth">
+	<section
+		id="about-me"
+		class="relative flex min-h-screen snap-start flex-wrap items-center justify-center gap-4 p-4"
+	>
+		<div class="sm:w-1/2 lg:w-1/3">
+			<Introduction />
+		</div>
+
+		<div class="absolute bottom-6 flex w-full items-center justify-center">
+			<Button href="#menu" size="icon" class="animate-bounce">
+				<ChevronDown />
+			</Button>
+		</div>
+	</section>
+
+	<section
+		id="menu"
+		class="relative flex min-h-screen snap-start flex-col flex-wrap items-center justify-center gap-4 p-4"
+	>
+		<Button href="#about-me" class="min-w-24">About Me</Button>
+		<Button
+			on:click={() => window.open('https://github.com/CEDoromal?tab=repositories', '_blank')}
+			class="min-w-24">Projects</Button
+		>
+		<Button
+			on:click={() => window.open('https://cedoromal.pages.dev/Doromal_Resume.pdf', '_blank')}
+			class="min-w-24">Resume</Button
+		>
+	</section>
+</main>
+
+<style>
+</style>
