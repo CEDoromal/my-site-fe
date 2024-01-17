@@ -1,6 +1,6 @@
 <script>
 	import Introduction from '$lib/components/Introduction.svelte';
-	import { ChevronDown, ChevronUp } from 'radix-icons-svelte';
+	import { ChevronDown } from 'radix-icons-svelte';
 	import { Button } from '$lib/components/ui/button';
 </script>
 
