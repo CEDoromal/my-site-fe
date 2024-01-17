@@ -17,7 +17,7 @@
 			<Introduction />
 		</div>
 
-		<div class="absolute bottom-6 flex w-full items-center justify-center">
+		<div class="absolute bottom-16 flex w-full items-center justify-center">
 			<Button href="#menu" size="icon" class="animate-bounce">
 				<ChevronDown />
 			</Button>
