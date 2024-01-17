@@ -9,10 +9,7 @@
 </svelte:head>
 
 <main class="h-screen snap-y snap-mandatory overflow-y-auto scroll-smooth">
-	<section
-		id="about-me"
-		class="relative flex min-h-screen snap-start flex-wrap items-center justify-center gap-4 p-4"
-	>
+	<section id="about-me">
 		<div class="sm:w-1/2 lg:w-1/3">
 			<Introduction />
 		</div>
@@ -24,10 +21,7 @@
 		</div>
 	</section>
 
-	<section
-		id="menu"
-		class="relative flex min-h-screen snap-start flex-col flex-wrap items-center justify-center gap-4 p-4"
-	>
+	<section id="menu">
 		<Button href="#about-me" class="min-w-24">About Me</Button>
 		<Button
 			on:click={() => window.open('https://github.com/CEDoromal?tab=repositories', '_blank')}
@@ -40,5 +34,8 @@
 	</section>
 </main>
 
-<style>
+<style lang="postcss">
+	section {
+		@apply relative flex min-h-screen snap-start flex-col flex-wrap items-center justify-center gap-4 p-4;
+	}
 </style>
