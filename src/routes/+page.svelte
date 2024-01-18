@@ -10,9 +10,7 @@
 
 <main class="h-screen snap-y snap-mandatory overflow-y-auto scroll-smooth">
 	<section id="about-me">
-		<div class="sm:w-1/2 lg:w-1/3">
-			<Introduction />
-		</div>
+		<Introduction class="sm:w-1/2 lg:w-1/3" />
 
 		<div class="absolute bottom-16 flex w-full items-center justify-center">
 			<Button href="#menu" size="icon" class="animate-bounce">
