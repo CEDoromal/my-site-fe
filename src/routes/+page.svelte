@@ -8,7 +8,7 @@
 	<title>CEDoromal</title>
 </svelte:head>
 
-<main class="h-screen snap-y snap-mandatory overflow-y-auto scroll-smooth">
+<main class="h-screen w-screen snap-y snap-mandatory overflow-y-auto scroll-smooth">
 	<section id="about-me">
 		<Introduction class="sm:w-1/2 lg:w-1/3" />
 
