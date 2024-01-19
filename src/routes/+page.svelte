@@ -31,7 +31,7 @@
 			class="min-w-24">Resume</Button
 		>
 
-		<Fireflies class="absolute left-0 top-0 h-full w-full" quantity={100} />
+		<Fireflies class="absolute left-0 top-0 h-full w-full -z-50" quantity={50} />
 	</section>
 </main>
 
