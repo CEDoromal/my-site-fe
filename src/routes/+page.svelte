@@ -2,6 +2,7 @@
 	import Introduction from '$lib/components/Introduction.svelte';
 	import { ChevronDown } from 'radix-icons-svelte';
 	import { Button } from '$lib/components/ui/button';
+	import Fireflies from '$lib/components/Fireflies.svelte';
 </script>
 
 <svelte:head>
@@ -29,6 +30,8 @@
 			on:click={() => window.open('https://cedoromal.pages.dev/Doromal_Resume.pdf', '_blank')}
 			class="min-w-24">Resume</Button
 		>
+
+		<Fireflies class="absolute left-0 top-0 h-full w-full" quantity={100} />
 	</section>
 </main>
 
