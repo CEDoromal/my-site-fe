@@ -42,6 +42,7 @@
 	.bg-forest {
 		background-image: url('/images/forest-bg-cropped.png');
 		background-size: cover;
+		background-position-x: center;
 		image-rendering: pixelated;
 	}
 </style>
