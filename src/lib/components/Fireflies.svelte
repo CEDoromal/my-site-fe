@@ -9,30 +9,37 @@
 		return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
 
-	let mousePosition = { x: 50, y: 50 };
-
 	onMount(() => {
+		const fireflies = document.getElementById('fireflies');
+		
+		let mouse = {
+			position: {
+				x: fireflies!.offsetWidth/2,
+				y: fireflies!.offsetHeight/2
+			}
+		};
+
 		document.addEventListener('mousemove', (event) => {
-			mousePosition.x = event.pageX;
-			mousePosition.y = event.pageY;
+			mouse.position.x = event.pageX;
+			mouse.position.y = event.pageY;
 		});
 
-		let fireflies = Array.from(
+		let fireflyArray = Array.from(
 			document.getElementsByClassName('firefly') as HTMLCollectionOf<HTMLElement>
 		);
 
 		const fireflyUpdateArray: number[] = [];
 
-		fireflies.forEach((firefly) => {
-			const duration = getRndInteger(2000, 4000);
+		fireflyArray.forEach((firefly) => {
+			const duration = getRndInteger(1500, 4000);
 			firefly.style.transitionDuration = duration + 'ms';
 			firefly.style.animationDuration = duration * 4 + 'ms';
 
 			fireflyUpdateArray.push(
 				setInterval(() => {
 					const target = {
-						x: mousePosition.x + getRndInteger(-200, 200),
-						y: mousePosition.y + getRndInteger(-200, 200)
+						x: mouse.position.x + getRndInteger(-200, 200),
+						y: mouse.position.y + getRndInteger(-200, 200)
 					};
 
 					firefly.style.translate = target.x + 'px ' + target.y + 'px';
@@ -42,26 +49,15 @@
 	});
 </script>
 
-<div class={className}>
-	<div class="relative flex h-full w-full items-center justify-center overflow-hidden">
-		<div class="fireflies absolute left-0 top-0 h-full w-full">
-			{#each { length: quantity } as _}
-				<div class="firefly absolute animate-pulse mix-blend-lighten"></div>
-			{/each}
-		</div>
+<div id="fireflies" class={className}>
+	<div class="relative left-0 top-0 flex h-full w-full overflow-clip">
+		{#each { length: quantity } as _}
+			<div class="firefly absolute mix-blend-lighten"></div>
+		{/each}
 	</div>
 </div>
 
 <style>
-	@keyframes pulse {
-		50% {
-			opacity: 0.5;
-		}
-	}
-	.animate-pulse {
-		animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-	}
-
 	@keyframes firefly-animation {
 		0%,
 		100% {
@@ -87,7 +83,7 @@
 		}
 	}
 	.firefly {
-		box-shadow: 0 0 0.2vh 0.2vh greenyellow;
+		box-shadow: 0 0 0.2vh 0.2vh yellowgreen;
 		transition-timing-function: ease-in-out;
 		animation-name: firefly-animation;
 		animation-timing-function: ease-in-out;
