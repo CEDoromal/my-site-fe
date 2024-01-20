@@ -1,6 +1,6 @@
 <script>
 	import Introduction from '$lib/components/Introduction.svelte';
-	import { ChevronDown, OpenInNewWindow, Download } from 'radix-icons-svelte';
+	import { ChevronDown, ExternalLink, Download } from 'radix-icons-svelte';
 	import { Button } from '$lib/components/ui/button';
 	import Fireflies from '$lib/components/Fireflies.svelte';
 </script>
@@ -27,7 +27,7 @@
 			class="min-w-24 relative"
 		>
 			Projects
-			<OpenInNewWindow class="absolute top-0 right-0" />
+			<ExternalLink class="absolute top-0 right-0" />
 		</Button>
 		<Button
 			on:click={() => window.open('https://cedoromal.pages.dev/Doromal_Resume.pdf', '_blank')}
