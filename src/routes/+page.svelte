@@ -30,13 +30,18 @@
 			on:click={() => window.open('https://cedoromal.pages.dev/Doromal_Resume.pdf', '_blank')}
 			class="min-w-24">Resume</Button
 		>
-
-		<Fireflies class="absolute left-0 top-0 h-full w-full -z-50" quantity={50} />
 	</section>
+	<Fireflies class="absolute left-0 top-0 -z-40 h-full w-full mix-blend-lighten" quantity={50} />
+	<div class="bg-forest absolute left-0 top-0 -z-50 h-full w-full mix-blend-overlay"></div>
 </main>
 
 <style lang="postcss">
 	section {
 		@apply relative flex min-h-screen snap-start flex-col flex-wrap items-center justify-center gap-4 p-4;
+	}
+	.bg-forest {
+		background-image: url('/images/forest-bg-cropped.png');
+		background-size: cover;
+		image-rendering: pixelated;
 	}
 </style>
