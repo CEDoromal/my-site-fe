@@ -1,6 +1,6 @@
 <script>
 	import Introduction from '$lib/components/Introduction.svelte';
-	import { ChevronDown } from 'radix-icons-svelte';
+	import { ChevronDown, OpenInNewWindow, Download } from 'radix-icons-svelte';
 	import { Button } from '$lib/components/ui/button';
 	import Fireflies from '$lib/components/Fireflies.svelte';
 </script>
@@ -21,15 +21,21 @@
 	</section>
 
 	<section id="menu">
-		<Button href="#about-me" class="min-w-24">About Me</Button>
+		<Button href="#about-me" class="min-w-24 relative">About Me</Button>
 		<Button
 			on:click={() => window.open('https://github.com/CEDoromal?tab=repositories', '_blank')}
-			class="min-w-24">Projects</Button
+			class="min-w-24 relative"
 		>
+			Projects
+			<OpenInNewWindow class="absolute top-0 right-0" />
+		</Button>
 		<Button
 			on:click={() => window.open('https://cedoromal.pages.dev/Doromal_Resume.pdf', '_blank')}
-			class="min-w-24">Resume</Button
+			class="min-w-24 relative"
 		>
+			Resume
+			<Download class="absolute top-0 right-0" />
+		</Button>
 	</section>
 	<Fireflies class="absolute left-0 top-0 -z-40 h-full w-full mix-blend-lighten" quantity={50} />
 	<div class="bg-forest absolute left-0 top-0 -z-50 h-full w-full mix-blend-overlay"></div>
