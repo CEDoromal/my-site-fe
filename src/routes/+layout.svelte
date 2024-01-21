@@ -3,7 +3,7 @@
 	import { ModeWatcher } from 'mode-watcher';
 </script>
 
-<ModeWatcher />
+<!-- <ModeWatcher /> -->
 
 <div class="flex items-center justify-center flex-wrap">
 	<slot />
